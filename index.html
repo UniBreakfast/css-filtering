@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head id="head">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' style=' background:black'><text y='16' font-family='Trebuchet MS' font-weight='900' fill='orange'>UB</text></svg>">
+
+  <!--<link rel="stylesheet" href="reset.css">-->
+  <!--<link rel="stylesheet" href="base.css">-->
+  <link rel="stylesheet" href="style.css">
+  <!--<script type="module" src="app.js"></script>-->
+  <!--<script src="script.js" defer></script>-->
+
+  <title>CSS Filtering</title>
+</head>
+
+<body id="body">
+  <aside>
+    <form action="">
+      <label>
+        <input type="radio" name="filter" value="" checked>
+        <span>All</span>
+      </label>
+      <label>
+        <input type="radio" name="filter" value="red">
+        <span>Red</span>
+      </label>
+      <label>
+        <input type="radio" name="filter" value="green">
+        <span>Green</span>
+      </label>
+      <label>
+        <input type="radio" name="filter" value="blue">
+        <span>Blue</span>
+      </label>
+    </form>
+  </aside>
+
+  <main>
+    <ul>
+      <script>
+        let html = ''
+
+        for (let i = 1; i <= 30; i++) {
+          const rnd = Math.random()
+          const color = rnd < 0.33 ? 'red' : rnd < 0.66 ? 'green' : 'blue'
+          html += `<li class="${color}">${i}</li>`
+        }
+        
+        document.write(html)
+        document.currentScript.remove()
+      </script>
+    </ul>
+  </main>
+</body>
+
+</html>
